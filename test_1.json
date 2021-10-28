@@ -1,0 +1,361 @@
+{
+    "type": "AdaptiveCard",
+    "$schema": "http://adaptivecards.io/schemas/adaptive-card.json",
+    "version": "1.5",
+    "body": [
+        {
+            "type": "ColumnSet",
+            "columns": [
+                {
+                    "type": "Column",
+                    "width": "stretch",
+                    "items": [
+                        {
+                            "type": "Input.ChoiceSet",
+                            "choices": [
+                                {
+                                    "title": "Project Claims",
+                                    "value": "Project Claims"
+                                },
+                                {
+                                    "title": "Manual Claims",
+                                    "value": "Manual Claims"
+                                },
+                                {
+                                    "title": "Marketing",
+                                    "value": "Marketing"
+                                },
+                                {
+                                    "title": "Invoice Difference",
+                                    "value": "Invoice Difference"
+                                },
+                                {
+                                    "title": "Missing Documents",
+                                    "value": "Missing Documents"
+                                },
+                                {
+                                    "title": "Missing Payment",
+                                    "value": "Missing Payment"
+                                },
+                                {
+                                    "title": "Cloud Open Positions",
+                                    "value": "Cloud Open Positions"
+                                },
+                                {
+                                    "title": "Funded Head",
+                                    "value": "Funded Head"
+                                },
+                                {
+                                    "title": "Legal Dispute",
+                                    "value": "Legal Dispute"
+                                },
+                                {
+                                    "title": "Return",
+                                    "value": "Return"
+                                },
+                                {
+                                    "title": "Price Protection",
+                                    "value": "Price Protection"
+                                },
+                                {
+                                    "title": "Service",
+                                    "value": "Service"
+                                },
+                                {
+                                    "title": "No Entry",
+                                    "value": "No Entry"
+                                }
+                            ],
+                            "separator": true,
+                            "wrap": true,
+                            "isRequired": true,
+                            "spacing": "Small",
+                            "label": "Focus",
+                            "errorMessage": "Your comment is required",
+                            "placeholder": "Indicate which is the Follow-up scope",
+                            "id": "Topic",
+                            "style": "filtered"
+                        }
+                    ],
+                    "verticalContentAlignment": "Center"
+                }
+            ]
+        },
+        {
+            "type": "ColumnSet",
+            "columns": [
+                {
+                    "type": "Column",
+                    "width": "stretch",
+                    "items": [
+                        {
+                            "type": "Input.Text",
+                            "placeholder": "Describe the Action required (max 100 characters)",
+                            "isMultiline": true,
+                            "maxLength": 100,
+                            "id": "Comment",
+                            "label": "Action",
+                            "errorMessage": "Your comment is required",
+                            "separator": true,
+                            "isRequired": true,
+                            "spacing": "Medium",
+                            "height": "stretch",
+                            "value": "${Comment}"
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "type": "ColumnSet",
+            "columns": [
+                {
+                    "type": "Column",
+                    "width": "stretch",
+                    "items": [
+                        {
+                            "type": "ActionSet",
+                            "actions": [
+                                {
+                                    "type": "Action.Submit",
+                                    "title": "Send Follow Up ",
+                                    "style": "destructive"
+                                }
+                            ],
+                            "horizontalAlignment": "Center",
+                            "height": "stretch"
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "type": "Input.Text",
+            "placeholder": "Placeholder text",
+            "id": "Sender",
+            "label": "Sender",
+            "value": "${Sender}",
+            "isVisible": false,
+            "style": "Email"
+        },
+        {
+            "type": "Input.Text",
+            "placeholder": "Placeholder text",
+            "id": "Time",
+            "label": "Time",
+            "value": "${Time}",
+            "isVisible": false
+        },
+        {
+            "type": "Input.Text",
+            "placeholder": "Placeholder text",
+            "id": "Date",
+            "label": "Date",
+            "value": "${Date}",
+            "isVisible": false
+        },
+        {
+            "type": "Input.Text",
+            "placeholder": "Placeholder text",
+            "id": "Dimension1",
+            "label": "Dimension1",
+            "value": "${Dimension1}",
+            "isVisible": false
+        },
+        {
+            "type": "Input.Text",
+            "placeholder": "Placeholder text",
+            "id": "Dimension2",
+            "label": "Dimension2",
+            "value": "${Dimension2}",
+            "isVisible": false
+        },
+        {
+            "type": "Input.Text",
+            "placeholder": "Placeholder text",
+            "id": "Dimension3",
+            "label": "Dimension3",
+            "value": "${Dimension3}",
+            "isVisible": false
+        },
+        {
+            "type": "Input.Text",
+            "placeholder": "Placeholder text",
+            "id": "Dimension4",
+            "label": "Dimension4",
+            "value": "${Dimension4}",
+            "isVisible": false
+        },
+        {
+            "type": "Input.Text",
+            "placeholder": "Placeholder text",
+            "id": "Value1",
+            "label": "Value1",
+            "value": "${Value1} ",
+            "isVisible": false
+        },
+        {
+            "type": "Input.Text",
+            "placeholder": "Placeholder text",
+            "id": "Value2",
+            "label": "Value2",
+            "value": "${Value2} ",
+            "isVisible": false
+        },
+        {
+            "type": "Input.Text",
+            "placeholder": "Placeholder text",
+            "id": "Value3",
+            "label": "Value3",
+            "value": "${Value3} ",
+            "isVisible": false
+        },
+        {
+            "type": "Input.Text",
+            "placeholder": "Placeholder text",
+            "id": "Value4",
+            "label": "Value4",
+            "value": "${Value4} ",
+            "isVisible": false
+        },
+        {
+            "type": "Container",
+            "items": [
+                {
+                    "type": "ActionSet",
+                    "actions": [
+                        {
+                            "type": "Action.ShowCard",
+                            "title": "Show Filters",
+                            "style": "destructive",
+                            "card": {
+                                "type": "AdaptiveCard",
+                                "body": [
+                                    {
+                                        "type": "Container",
+                                        "id": "ContainerFilterValues2",
+                                        "items": [
+                                            {
+                                                "type": "ColumnSet",
+                                                "columns": [
+                                                    {
+                                                        "type": "Column",
+                                                        "width": "stretch",
+                                                        "items": [
+                                                            {
+                                                                "type": "TextBlock",
+                                                                "text": "Filters:",
+                                                                "wrap": true,
+                                                                "color": "Accent",
+                                                                "weight": "Bolder",
+                                                                "spacing": "Small"
+                                                            },
+                                                            {
+                                                                "type": "TextBlock",
+                                                                "text": "Dimension1: ${Dimension1}",
+                                                                "wrap": true,
+                                                                "size": "Small",
+                                                                "isSubtle": true,
+                                                                "spacing": "Small",
+                                                                "separator": true,
+                                                                "maxLines": 1
+                                                            },
+                                                            {
+                                                                "type": "TextBlock",
+                                                                "text": "Dimension2: ${Dimension2}",
+                                                                "wrap": true,
+                                                                "isSubtle": true,
+                                                                "size": "Small"
+                                                            },
+                                                            {
+                                                                "type": "TextBlock",
+                                                                "text": "Dimension3: ${Dimension3}",
+                                                                "wrap": true,
+                                                                "isSubtle": true,
+                                                                "size": "Small"
+                                                            },
+                                                            {
+                                                                "type": "TextBlock",
+                                                                "text": "Dimension4: ${Dimension4}",
+                                                                "wrap": true,
+                                                                "isSubtle": true,
+                                                                "size": "Small"
+                                                            }
+                                                        ]
+                                                    },
+                                                    {
+                                                        "type": "Column",
+                                                        "width": "stretch",
+                                                        "id": "Values",
+                                                        "items": [
+                                                            {
+                                                                "type": "TextBlock",
+                                                                "text": "Values",
+                                                                "wrap": true,
+                                                                "color": "Accent",
+                                                                "weight": "Bolder",
+                                                                "spacing": "Small"
+                                                            },
+                                                            {
+                                                                "type": "TextBlock",
+                                                                "text": "Value1: ${Value1}",
+                                                                "wrap": true,
+                                                                "size": "Small",
+                                                                "isSubtle": true,
+                                                                "maxLines": 1,
+                                                                "separator": true,
+                                                                "spacing": "Small"
+                                                            },
+                                                            {
+                                                                "type": "TextBlock",
+                                                                "text": "Value2: ${Value2}",
+                                                                "wrap": true,
+                                                                "isSubtle": true,
+                                                                "size": "Small"
+                                                            },
+                                                            {
+                                                                "type": "TextBlock",
+                                                                "text": "Value3: ${Value3}",
+                                                                "wrap": true,
+                                                                "isSubtle": true,
+                                                                "size": "Small"
+                                                            },
+                                                            {
+                                                                "type": "TextBlock",
+                                                                "text": "Value4: ${Value4}",
+                                                                "wrap": true,
+                                                                "isSubtle": true,
+                                                                "size": "Small"
+                                                            }
+                                                        ]
+                                                    }
+                                                ]
+                                            }
+                                        ],
+                                        "separator": true,
+                                        "horizontalAlignment": "Center",
+                                        "height": "stretch",
+                                        "verticalContentAlignment": "Center",
+                                        "style": "accent",
+                                        "bleed": true
+                                    }
+                                ],
+                                "$schema": "http://adaptivecards.io/schemas/adaptive-card.json"
+                            }
+                        }
+                    ],
+                    "horizontalAlignment": "Center"
+                }
+            ],
+            "horizontalAlignment": "Center",
+            "backgroundImage": {
+                "horizontalAlignment": "Center",
+                "verticalAlignment": "Center"
+            },
+            "verticalContentAlignment": "Center",
+            "spacing": "Small",
+            "height": "stretch"
+        }
+    ],
+    "verticalContentAlignment": "Center"
+}
